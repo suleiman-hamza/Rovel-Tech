@@ -78,7 +78,10 @@ const cases = reactive([
 </script>
 
 <template>
-  <section class="py-20 bg-[url('/images/bg-pattern.png')] bg-cover bg-center">
+  <section
+    id="services"
+    class="py-20 bg-[url('/images/bg-pattern.png')] bg-cover bg-center"
+  >
     <div class="container mx-auto px-4">
       <div class="flex justify-center">
         <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 mr-2"></div>
