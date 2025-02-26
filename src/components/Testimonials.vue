@@ -15,6 +15,8 @@
         class="mt-8 overflow-hidden relative"
         @mouseenter="pauseCarousel"
         @mouseleave="resumeCarousel"
+        @touchstart="pauseCarousel"
+        @touchend="resumeCarousel"
       >
         <div
           class="flex w-max animate-scroll"
@@ -23,7 +25,7 @@
           <div
             v-for="(testimonial, index) in testimonials"
             :key="index"
-            class="testimonialCard p-5 rounded-md bg-[#EEF5F6] hover:bg-transparent w-[350px] flex-shrink-0 mx-4"
+            class="testimonialCard p-5 rounded-md bg-[#EEF5F6] hover:bg-transparent w-[350px] flex-shrink-0 mx-4 cursor-pointer"
           >
             <div class="flex items-center gap-4 p-5">
               <figure>
