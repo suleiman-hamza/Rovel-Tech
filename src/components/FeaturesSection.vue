@@ -134,7 +134,6 @@ useIntersectionObserver(
             class="text-center md:col-start-2 md:row-start-3 flex justify-center items-center"
           >
             <div class="bg-[#057CC3] w-[65%] p-6 text-white text-center">
-              {{ features[3].icon }}
               <h3 class="text-2xl font-bold mt-4">{{ features[3].title }}</h3>
               <p class="font-Poppins">{{ features[3].description }}</p>
             </div>
