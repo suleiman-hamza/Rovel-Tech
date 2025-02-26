@@ -52,7 +52,7 @@ const steps = reactive([
 </script>
 
 <template>
-  <section class="py-24 bg-[#057CC3] text-white">
+  <section id="howItWorks" class="py-24 bg-[#057CC3] text-white">
     <div class="container mx-auto px-8">
       <section
         class="flex flex-col items-center justify-between md:flex-row md:items-start"
