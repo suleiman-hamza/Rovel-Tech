@@ -40,37 +40,37 @@ addIntersectionObserver(marketing, "animate__fadeInRightBig", 0.5);
 const cases = reactive([
   {
     title: "Tech Training",
-    image: "/public/images/tech-training.png",
+    image: "/images/tech-training.png",
     description:
       " Rovel Tech Academy's comprehensive tech training programs, cover a range of in-demand skills, designed to advance your career and keep you at the forefront of technology. Join Rovel Tech Academy today",
   },
   {
     title: "Solar Solution and Installation",
-    image: "/public/images/solar-solution.png",
+    image: "/images/solar-solution.png",
     description:
       " In today's digital age, effective marketing is essential. Rovel Tech offers comprehensive digital marketing solutions to help you reach your target audience, drive traffic, and maximize conversions",
   },
   {
     title: "Data and Premium Subscriptions ",
-    image: "/public/images/data-subscription.png",
+    image: "/images/data-subscription.png",
     description:
       "Stay ahead of the curve with our data subscription services. Rovel Tech provides an all-inclusive subscription package that unlocks a world of premium tools and services, including  platforms like Netflix etc",
   },
   {
     title: "App/Web Design And Development",
-    image: "/public/images/app-design.png",
+    image: "/images/app-design.png",
     description:
       "Here at Rovel Tech, we specialize in bringing your digital vision to life with our expert web development services. Whether you're launching a brand-new website or revamping an existing one.",
   },
   {
     title: "Graphic Design/Branding",
-    image: "/public/images/graphic-design.png",
+    image: "/images/graphic-design.png",
     description:
       "Our branding and graphic design experts  provide a comprehensive range of services to elevate your brand presence.  From captivating logos and eye-catching flyers to engaging social media posts and elegant brochures.",
   },
   {
     title: "Digital Marketing",
-    image: "/public/images/digital-marketing.png",
+    image: "/images/digital-marketing.png",
     description:
       " In today's digital age, effective marketing is essential. Rovel Tech offers comprehensive digital marketing solutions to help you reach your target audience, drive traffic, and maximize conversions",
   },
