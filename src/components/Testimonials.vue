@@ -82,35 +82,35 @@ import { ref } from "vue";
 
 const testimonials = [
   {
-    image: "/public/images/testimonial-1.png",
+    image: "/images/testimonial-1.png",
     name: "Floyd Miles",
     position: "Vice President, GoPro",
     quote:
       "Rovel Tech's expertise has truly revolutionized our online presence. From the initial consultation to the final implementation, their team demonstrated a deep understanding of our business needs and goals.",
   },
   {
-    image: "/public/images/testimonial-1.png",
+    image: "/images/testimonial-1.png",
     name: "Floyd Miles",
     position: "Vice President, GoPro",
     quote:
       "Rovel Tech's expertise has truly revolutionized our online presence. From the initial consultation to the final implementation, their team demonstrated a deep understanding of our business needs and goals.",
   },
   {
-    image: "/public/images/testimonial-1.png",
+    image: "/images/testimonial-1.png",
     name: "Floyd Miles",
     position: "Vice President, GoPro",
     quote:
       "Rovel Tech's expertise has truly revolutionized our online presence. From the initial consultation to the final implementation, their team demonstrated a deep understanding of our business needs and goals.",
   },
   {
-    image: "/public/images/testimonial-1.png",
+    image: "/images/testimonial-1.png",
     name: "Floyd Miles",
     position: "Vice President, GoPro",
     quote:
       "Rovel Tech's expertise has truly revolutionized our online presence. From the initial consultation to the final implementation, their team demonstrated a deep understanding of our business needs and goals.",
   },
   {
-    image: "/public/images/testimonial-1.png",
+    image: "/images/testimonial-1.png",
     name: "Floyd Miles",
     position: "Vice President, GoPro",
     quote:
