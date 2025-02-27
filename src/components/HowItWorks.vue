@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import { reactive, ref, Ref } from "vue";
-import { useIntersectionObserver } from "@vueuse/core";
+import {reactive, ref, Ref} from "vue";
+import {useIntersectionObserver} from "@vueuse/core";
+import Link from "./Link.vue";
 
 const explore = ref<HTMLElement | null>(null);
 const contanctUs = ref<HTMLElement | null>(null);
@@ -80,7 +81,9 @@ const steps = reactive([
           <button
             class="bg-[#FFA500] text-white px-8 py-3 rounded-full transition font-bold mt-8"
           >
+            <Link to="#services">
             Explore Our Services
+            </Link>
           </button>
         </div>
         <div class="grid grid-cols-1 gap-4 items-center">
