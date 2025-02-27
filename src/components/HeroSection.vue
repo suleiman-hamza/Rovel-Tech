@@ -17,7 +17,6 @@ const displayImages = [
   "/images/go-digital.png",
   "/images/app.png",
   "/images/website.png",
-
 ];
 const currentIndex = ref(0);
 let interval: number | undefined;
@@ -38,14 +37,14 @@ onUnmounted(() => {
 <template>
   <section
     id="home"
-    class="py-20 bg-[url('/images/HeroBg.png')] bg-cover bg-center "
+    class="py-20 bg-[url('/images/HeroBg.png')] bg-cover bg-center"
   >
     <div class="container mx-auto px-4">
       <div class="">
         <div
           class="md:w-full mb-10 md:mb-0 text-white text-center flex flex-col justify-center items-center"
         >
-          <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          <h1 class="text-4xl lg:text-6xl font-bold mb-6 font-PtSansCaption">
             Innovation IT Solutions for <br />
             Your Business
           </h1>
@@ -55,64 +54,46 @@ onUnmounted(() => {
           <button
             class="bg-[#FFA500] text-white px-8 py-3 rounded-full transition font-bold"
           >
-            <Link to="#services"> Explore Our Services </Link>
+            <Link class="font-Poppins" to="#services">
+              Explore Our Services
+            </Link>
           </button>
         </div>
 
         <!-- heroImage -->
-        <section class="flex  flex-col md:flex-row justify-between items-center mt-12">
-                    <div class="text-container overflow-hidden h-48 w-48 md:h-64 md:w-64 bg-white rounded-full mb-4">
-                      <transition mode="out-in" name="slide-vertical">
-                        <h1 :key="currentIndex" class="flex items-center text-center justify-center pt-20 text-2xl md:text-5xl font-bold font-Poppins text-[#057CC3]">
-                          {{ displayText[currentIndex] }}
-                        </h1>
-                      </transition>
-                    </div>
-          <div class="overflow-hidden ">
+        <section
+          class="flex flex-col md:flex-row justify-between items-center mt-12"
+        >
+          <div
+            class="text-container overflow-hidden h-48 w-48 md:h-64 md:w-64 bg-white rounded-full mb-4"
+          >
+            <transition mode="out-in" name="slide-vertical">
+              <h1
+                :key="currentIndex"
+                class="flex items-center text-center justify-center pt-20 text-2xl md:text-5xl font-bold font-Poppins text-[#057CC3]"
+              >
+                {{ displayText[currentIndex] }}
+              </h1>
+            </transition>
+          </div>
+          <div class="overflow-hidden">
             <transition mode="out-in" name="slide-vertical">
               <img
                 :key="currentIndex"
                 :src="displayImages[currentIndex]"
                 alt="Hero Image"
-                class=" md:h-[328px] md:w-[558px] object-cover "
+                class="md:h-[328px] md:w-[558px] object-cover"
               />
             </transition>
           </div>
         </section>
         <!-- heroImage -->
-
-
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-.highlight::before {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-}
-.highlight::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-}
-
-.highlight::before {
-  width: 100px;
-  height: 100px;
-  background-color: pink;
-  top: -10px;
-  left: -10px;
-}
-
-.highlight::after {
-  width: 50px;
-  height: 50px;
-  background-color: black;
-}
-
 .slide-vertical-enter-active,
 .slide-vertical-leave-active {
   transition:
