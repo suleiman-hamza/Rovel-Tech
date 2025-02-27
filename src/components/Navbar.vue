@@ -7,7 +7,7 @@ import Link from "./Link.vue";
 const target = useTemplateRef<HTMLDivElement>('target')
 const targetIsVisible = shallowRef(false)
 
-const { stop } =useIntersectionObserver(target, ([entry]) => {
+useIntersectionObserver(target, ([entry]) => {
   targetIsVisible.value = entry?.isIntersecting||false
 
 })
