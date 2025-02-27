@@ -1,47 +1,51 @@
 <script lang="ts" setup>
-import {useIntersectionObserver} from "@vueuse/core";
-import {ref, shallowRef, useTemplateRef} from "vue";
+import { useIntersectionObserver } from "@vueuse/core";
+import { ref, shallowRef, useTemplateRef } from "vue";
 import Link from "./Link.vue";
 
-
-const target = useTemplateRef<HTMLDivElement>('target')
-const targetIsVisible = shallowRef(false)
+const target = useTemplateRef<HTMLDivElement>("target");
+const targetIsVisible = shallowRef(false);
 
 useIntersectionObserver(target, ([entry]) => {
-  targetIsVisible.value = entry?.isIntersecting||false
-
-})
+  targetIsVisible.value = entry?.isIntersecting || false;
+});
 
 const visibility = ref(false);
 const toggleVisibility = () => (visibility.value = !visibility.value);
 
 const ActiveLink = ref("Home");
-const updateActive=(to:string)=>{
+const updateActive = (to: string) => {
   ActiveLink.value = to;
-}
-const isActive = (to: string) => {
-  return ActiveLink.value === to ? 'text-[#FFA500]' : 'text-[#1e1e1e]';
 };
-
-
-
+const isActive = (to: string) => {
+  return ActiveLink.value === to ? "text-[#FFA500]" : "text-[#1e1e1e]";
+};
 </script>
 
 <template>
   <div ref="target" class="container mx-auto px-5">
-    <header :class="{'fixed top-0 left-0 w-full bg-white shadow-lg z-[999] px-5':!targetIsVisible, 'lg:py-8 lg:px-5':targetIsVisible}" class="lg:py-3.5 flex justify-between items-center" >
+    <header
+      :class="{
+        'fixed top-0 left-0 w-full bg-white shadow-lg z-[999] px-5':
+          !targetIsVisible,
+        'lg:py-8 lg:px-5': targetIsVisible,
+      }"
+      class="lg:py-3.5 flex justify-between items-center"
+    >
       <figure>
         <Link to="/">
-        <img alt="Logo" src="/images/logo.png" width="100px" />
+          <img alt="Logo" src="/images/logo.png" width="100px" />
         </Link>
       </figure>
 
       <nav class="hidden lg:flex lg:items-center">
-        <ul class="flex space-x-8 text-lg font-Poppins font-bold">
+        <ul
+          class="flex space-x-8 text-lg font-Poppins font-bold text-[#1D1C1C]"
+        >
           <li>
             <Link
               :class="isActive('Home')"
-              class="cursor-pointer "
+              class="cursor-pointer"
               to="#home"
               @click="updateActive('Home')"
               >Home</Link
@@ -50,7 +54,7 @@ const isActive = (to: string) => {
           <li>
             <Link
               :class="isActive('AboutSection')"
-              class="cursor-pointer "
+              class="cursor-pointer"
               to="#about"
               @click="updateActive('AboutSection')"
               >About Us</Link
@@ -59,7 +63,7 @@ const isActive = (to: string) => {
           <li>
             <Link
               :class="isActive('Services')"
-              class="cursor-pointer "
+              class="cursor-pointer"
               to="#services"
               @click="updateActive('Services')"
               >Services</Link
@@ -68,7 +72,7 @@ const isActive = (to: string) => {
           <li>
             <Link
               :class="isActive('HowItWorks')"
-              class="cursor-pointer "
+              class="cursor-pointer"
               to="#howItWorks"
               @click="updateActive('HowItWorks')"
               >How it works</Link
@@ -77,7 +81,7 @@ const isActive = (to: string) => {
           <li>
             <Link
               :class="isActive('WhyChooseUs')"
-              class="cursor-pointer "
+              class="cursor-pointer"
               to="#whyChooseUs"
               @click="updateActive('WhyChooseUs')"
               >Why Choose Us</Link
@@ -86,7 +90,7 @@ const isActive = (to: string) => {
           <li>
             <Link
               :class="isActive('Testimonial')"
-              class="cursor-pointer "
+              class="cursor-pointer"
               to="#testimonial"
               @click="updateActive('Testimonial')"
               >Testimonial</Link
@@ -103,7 +107,7 @@ const isActive = (to: string) => {
       </nav>
 
       <!-- icon -->
-      <div class="text-2xl lg:hidden cursor-pointer"  @click="toggleVisibility">
+      <div class="text-2xl lg:hidden cursor-pointer" @click="toggleVisibility">
         <i v-if="!visibility" class="fa-solid fa-bars"></i>
         <i v-else class="fa-solid fa-xmark"></i>
       </div>
@@ -154,7 +158,6 @@ const isActive = (to: string) => {
           </li>
           <li>
             <Link
-
               :class="isActive('WhyChooseUs')"
               class="cursor-pointer text-[#1e1e1e]"
               to="#whyChooseUs"
