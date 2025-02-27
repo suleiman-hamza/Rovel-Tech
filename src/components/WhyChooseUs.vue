@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { reactive, ref, Ref } from "vue";
-import { useIntersectionObserver } from "@vueuse/core";
+import {reactive, ref, Ref} from "vue";
+import {useIntersectionObserver} from "@vueuse/core";
 
 const aboutSection = ref<HTMLElement | null>(null);
 const approach = ref<HTMLElement | null>(null);
@@ -64,7 +64,7 @@ const stats = reactive([
 </script>
 
 <template>
-  <section class="py-20">
+  <section id="whyChooseUs" class="py-20">
     <div class="container mx-auto px-4">
       <div class="flex justify-center">
         <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 mr-2"></div>
