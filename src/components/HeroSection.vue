@@ -1,11 +1,9 @@
-<script lang="ts">
-export default {
-  name: "HeroSection",
-};
+<script lang="ts" setup>
+import Link from "../components/Link.vue";
 </script>
 
 <template>
-  <section
+  <section id="home"
     class="py-20 bg-[url('/images/HeroBg.png')] bg-cover bg-center lg:h-screen"
   >
     <div class="container mx-auto px-4">
@@ -23,7 +21,7 @@ export default {
           <button
             class="bg-[#FFA500] text-white px-8 py-3 rounded-full transition font-bold"
           >
-            Explore Our Services
+            <Link to="#services"> Explore Our Services </Link>
           </button>
         </div>
 
