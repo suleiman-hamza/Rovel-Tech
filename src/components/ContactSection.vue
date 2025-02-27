@@ -56,7 +56,7 @@ const handleSubmit = () => {
     <section class="grid place-content-center text-center text-white mb-8">
       <div class="flex justify-center">
         <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 mr-2"></div>
-        <h1 class="font-bold text-5xl flex items-center justify-center">
+        <h1 class="font-bold text-5xl flex items-center justify-center font-PtSansCaption">
           Contact Us
         </h1>
         <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 ml-2"></div>
@@ -72,7 +72,7 @@ const handleSubmit = () => {
       <section class="bg-white px-8 py-12 rounded-lg shadow-lg">
         <div class="flex flex-col md:flex-row justify-between gap-8">
           <section>
-            <h3 class="mb-5 font-bold text-2xl">Our Contacts</h3>
+            <h3 class="mb-5 font-bold text-2xl font-PtSansCaption">Our Contacts</h3>
             <div
               v-for="(detail, index) in details"
               :key="index"
@@ -80,20 +80,20 @@ const handleSubmit = () => {
             >
               <component :is="detail.icon" />
               <div class="mb-10">
-                <h4 class="text-#3A3A3A text-xl font-bold">
+                <h4 class="text-#3A3A3A text-xl font-bold font-Poppins">
                   {{ detail.title }}
                 </h4>
-                <p class="text-[#111] text-lg">{{ detail.text }}</p>
+                <p class="text-[#111] text-lg font-Poppins">{{ detail.text }}</p>
               </div>
             </div>
           </section>
 
           <section>
             <section class="mb-5">
-              <p class="text-[#3A3A3A ] mb-1.5">
+              <p class="text-[#3A3A3A ] mb-1.5 font-Poppins">
                 LET HELP YOU WITH YOUR PROJECT
               </p>
-              <h4 class="font-bold text-2xl text-[#3A3A3A]">
+              <h4 class="font-bold text-2xl text-[#3A3A3A] font-Poppins">
                 What is Your Project About?
               </h4>
             </section>
@@ -101,13 +101,13 @@ const handleSubmit = () => {
             <!-- Select Project  -->
             <section>
               <label
-                class="text-lg text-[#3A3A3A] font-semibold inline-block mb-3.5"
+                class="text-lg text-[#3A3A3A] font-semibold inline-block font-Poppins mb-3.5"
                 for="project"
                 >Select Project</label
               >
               <select
                 id="project"
-                class="border-2 border-[#6E7276] w-full rounded-md px-2 py-3 bg-transparent"
+                class="border-2 border-[#6E7276] w-full rounded-md px-2 py-3 bg-transparent font-Poppins"
               >
                 <option value="web">Web Development</option>
                 <option value="mobile">Mobile Development</option>
@@ -119,7 +119,7 @@ const handleSubmit = () => {
             <form class="mt-5" @submit.prevent="handleSubmit">
               <!--label textarea-->
               <label
-                class="text-lg text-[#3A3A3A] font-semibold inline-block mb-3.5"
+                class="text-lg text-[#3A3A3A] font-semibold inline-block mb-3.5 font-Poppins"
                 for="message"
                 >Message</label
               >
@@ -127,7 +127,7 @@ const handleSubmit = () => {
                 <textarea
                   id="message"
                   v-model="form.message"
-                  class="border-2 border-[#6E7276] w-full resize-none rounded-md px-2 py-4"
+                  class="border-2 border-[#6E7276] w-full resize-none rounded-md px-2 py-4 font-Poppins"
                   cols="30"
                   name="message"
                   placeholder="Describe your project"
@@ -139,14 +139,14 @@ const handleSubmit = () => {
                 <!-- label name -->
                 <div>
                   <label
-                    class="inline-block mb-3.5 text-lg text-[#3A3A3A] font-semibold"
+                    class="inline-block mb-3.5 text-lg text-[#3A3A3A] font-PtSansCaption font-semibold"
                     for="name"
                     >Name</label
                   >
                   <input
                     id="name"
                     v-model="form.name"
-                    class="border-2 border-[#6E7276] w-full rounded-md px-2 py-1"
+                    class="border-2 border-[#6E7276] w-full rounded-md px-2 py-1 font-Poppins"
                     placeholder="Enter your name"
                     type="text"
                   />
@@ -156,14 +156,14 @@ const handleSubmit = () => {
                 <!-- label phoneNumber -->
                 <div>
                   <label
-                    class="inline-block mb-3.5 text-lg text-[#3A3A3A] font-semibold"
+                    class="inline-block mb-3.5 text-lg text-[#3A3A3A] font-semibold font-Poppins"
                     for="phone"
                     >Phone Number</label
                   >
                   <input
                     id="name"
                     v-model="form.phoneNumber"
-                    class="border-2 border-[#6E7276] w-full rounded-md px-2 py-1"
+                    class="border-2 border-[#6E7276] w-full rounded-md px-2 py-1 font-Poppins"
                     placeholder="Enter your phone number"
                     type="text"
                   />
@@ -172,7 +172,7 @@ const handleSubmit = () => {
               </section>
 
               <button
-                class="bg-[#FF9635] px-4 py-2 rounded-full text-white"
+                class="bg-[#FF9635] px-4 py-2 rounded-full text-white font-Poppins"
                 type="submit"
               >
                 Send Message

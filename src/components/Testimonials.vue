@@ -4,7 +4,7 @@
       <div class="flex justify-center">
         <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 mr-2"></div>
         <h1
-          class="font-bold text-3xl text-center md:text-4xl lg:text-start flex items-center justify-center"
+          class="font-bold font-PtSansCaption text-3xl text-center md:text-4xl lg:text-start flex items-center justify-center"
         >
           What Our Client Say
         </h1>
@@ -32,7 +32,7 @@
                 <img :src="testimonial.image" alt="Testimonial" />
               </figure>
               <div>
-                <p class="text-lg font-bold">{{ testimonial.name }}</p>
+                <p class="text-lg font-bold font-Poppins">{{ testimonial.name }}</p>
                 <p class="font-Poppins">{{ testimonial.position }}</p>
               </div>
             </div>

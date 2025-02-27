@@ -6,7 +6,7 @@
       <div class="text-center mb-12">
         <div class="flex justify-center mb-4">
           <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 mr-2"></div>
-          <h2 class="text-3xl md:text-4xl font-bold mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-12 font-PtSansCaption">
             Technologies We Use
           </h2>
           <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 ml-2"></div>

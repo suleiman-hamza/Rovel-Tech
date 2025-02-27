@@ -68,7 +68,7 @@ const stats = reactive([
     <div class="container mx-auto px-4">
       <div class="flex justify-center">
         <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 mr-2"></div>
-        <h2 class="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
+        <h2 class="text-3xl font-bold text-center mb-12 font-PtSansCaption">Why Choose Us</h2>
         <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 ml-2"></div>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-2 gap-10"></div>

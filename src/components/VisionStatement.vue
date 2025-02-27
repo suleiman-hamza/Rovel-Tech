@@ -7,7 +7,7 @@
         class="flex justify-between items-center text-white flex-wrap md:flex-nowrap"
       >
         <div>
-          <h1 class="font-bold text-3xl mb-5">
+          <h1 class="font-bold font-PtSansCaption text-3xl lg:text-5xl mb-5">
             Our solution cut across the world
           </h1>
           <p class="text-lg font-Poppins max-w-xl">

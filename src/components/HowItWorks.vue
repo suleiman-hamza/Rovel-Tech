@@ -63,7 +63,7 @@ const steps = reactive([
         >
           <div class="flex justify-center">
             <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 mr-2"></div>
-            <h2 class="text-2xl lg:text-4xl font-bold">How It Works</h2>
+            <h2 class="text-2xl lg:text-4xl font-bold font-PtSansCaption">How It Works</h2>
             <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 ml-2"></div>
           </div>
           <p
@@ -81,7 +81,7 @@ const steps = reactive([
           <button
             class="bg-[#FFA500] text-white px-8 py-3 rounded-full transition font-bold mt-8"
           >
-            <Link to="#services">
+            <Link class="font-Poppins" to="#services">
             Explore Our Services
             </Link>
           </button>

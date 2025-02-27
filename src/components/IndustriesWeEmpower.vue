@@ -2,7 +2,7 @@
   <section class="py-24">
     <div class="container mx-auto px-8">
       <div class="text-center">
-        <h1 class="text-2xl md:text-3xl font-bold mb-5 text-[#211D1F]">
+        <h1 class="text-2xl md:text-3xl font-bold mb-5 text-[#211D1F] font-PtSansCaption">
           Industries We Empower
         </h1>
         <p class="font-poppins text-[#3A3A3A] text-lg">

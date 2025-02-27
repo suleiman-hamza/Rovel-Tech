@@ -54,7 +54,7 @@ useIntersectionObserver(
         <div class="text-center md:text-left">
           <div class="flex justify-center">
             <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 mr-2"></div>
-            <h1 class="text-4xl md:text-5xl font-bold mb-8">About Us</h1>
+            <h1 class="text-4xl md:text-5xl font-bold font-PtSansCaption mb-8">About Us</h1>
             <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 ml-2"></div>
           </div>
           <h3

@@ -48,7 +48,7 @@ const details = reactive([
           <figure class="mb-4">
             <img alt="Logo" src="/images/logo.png" width="100px" />
           </figure>
-          <p class="text-[#565252] max-w-sm">
+          <p class="text-[#565252] max-w-sm font-Poppins">
             At Rovels’ Technology, we embark on a relentless pursuit of digital
             excellence, driven by innovation and fueled by a commitment to
             transforming ideas into impactful realities. As a beacon in the
@@ -58,30 +58,30 @@ const details = reactive([
         </div>
         <section class="flex flex-wrap gap-10 lg:flex-nowrap">
           <div>
-            <h3 class="text-xl font-bold mb-4 text-[#656464]">Company</h3>
+            <h3 class="text-xl font-bold mb-4 text-[#656464] font-PtSansCaption">Company</h3>
             <ul class="space-y-8 text-[#565252] font-bold lg:w-[7rem]">
               <li>
-              <Link to="#home">
+              <Link class="font-Poppins" to="#home">
                 Home
               </Link>
               </li>
               <li>
-                <Link to="#services">
+                <Link class="font-Poppins" to="#services">
                 Services
                 </Link>
               </li>
               <li>
-                <Link to="#about">
+                <Link class="font-Poppins" to="#about">
                 About Us
                 </Link>
               </li>
               <li>
-                <Link to="#howItWorks">
+                <Link class="font-Poppins" to="#howItWorks">
                 How it Works
                 </Link>
               </li>
               <li>
-                <Link to="#contact">
+                <Link class="font-Poppins" to="#contact">
 
                 Contact Us
                 </Link>
@@ -105,7 +105,7 @@ const details = reactive([
             </div>
           </div>
           <div>
-            <h3 class="text-xl font-bold mb-4 text-[#3A3A3A]">
+            <h3 class="text-xl font-bold mb-4 text-[#3A3A3A] font-PtSansCaption" >
               Subscribe To Our News Letter
             </h3>
             <div class="flex items-center space-x-4 bg-[#EBF1F9] rounded-full">
@@ -136,7 +136,7 @@ const details = reactive([
         </section>
       </div>
       <div
-        class="mt-8 pt-8 border-t border-gray-700 text-center text-[#3A3A3A]"
+        class="mt-8 pt-8 border-t border-gray-700 text-center text-[#3A3A3A] font-Poppins"
       >
         <p>Copyright &copy; 2023 All right reserve Rovel Tech Limited. com</p>
       </div>

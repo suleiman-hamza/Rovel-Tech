@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import "animate.css";
 
-import { reactive, Ref, ref } from "vue";
-import { useIntersectionObserver } from "@vueuse/core";
+import {reactive, Ref, ref} from "vue";
+import {useIntersectionObserver} from "@vueuse/core";
 
 const aboutSection = ref<HTMLElement | null>(null);
 const webDeveloper = ref<HTMLElement | null>(null);
@@ -85,7 +85,7 @@ const cases = reactive([
     <div class="container mx-auto px-4">
       <div class="flex justify-center">
         <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 mr-2"></div>
-        <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold font-PtSansCaption text-center text-white mb-12">
           Our Services
         </h2>
         <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 ml-2"></div>
@@ -105,7 +105,7 @@ const cases = reactive([
           </figure>
 
           <div class="grid place-items-center">
-            <h1 class="mt-5 text-2xl md:text-xl lg:text-2xl font-bold">
+            <h1 class="mt-5 text-2xl md:text-xl lg:text-2xl font-bold font-PtSansCaption">
               {{ cases[0].title }}
             </h1>
             <div class="bg-[#FFA500] w-10 h-1 rounded-full my-2.5 mr-2"></div>
@@ -125,7 +125,7 @@ const cases = reactive([
           </figure>
 
           <div class="grid place-items-center">
-            <h1 class="mt-5 text-2xl md:text-xl lg:text-2xl font-bold">
+            <h1 class="mt-5 text-2xl md:text-xl lg:text-2xl font-bold font-PtSansCaption">
               {{ cases[1].title }}
             </h1>
             <div class="bg-[#FFA500] w-10 h-1 rounded-full my-2.5 mr-2"></div>
@@ -145,7 +145,7 @@ const cases = reactive([
           </figure>
 
           <div class="grid place-items-center">
-            <h1 class="mt-5 text-2xl md:text-xl lg:text-2xl font-bold">
+            <h1 class="mt-5 text-2xl md:text-xl lg:text-2xl font-bold font-PtSansCaption">
               {{ cases[2].title }}
             </h1>
             <div class="bg-[#FFA500] w-10 h-1 rounded-full my-2.5 mr-2"></div>
@@ -165,7 +165,7 @@ const cases = reactive([
           </figure>
 
           <div class="grid place-items-center">
-            <h1 class="mt-5 text-2xl md:text-lg lg:text-2xl font-bold">
+            <h1 class="mt-5 text-2xl md:text-lg lg:text-2xl font-bold font-PtSansCaption">
               {{ cases[3].title }}
             </h1>
             <div class="bg-[#FFA500] w-10 h-1 rounded-full my-2.5 mr-2"></div>
@@ -185,7 +185,7 @@ const cases = reactive([
           </figure>
 
           <div class="grid place-items-center">
-            <h1 class="mt-5 text-2xl md:text-xl lg:text-2xl font-bold">
+            <h1 class="mt-5 text-2xl md:text-xl lg:text-2xl font-bold font-PtSansCaption">
               {{ cases[4].title }}
             </h1>
             <div class="bg-[#FFA500] w-10 h-1 rounded-full my-2.5 mr-2"></div>
@@ -205,7 +205,7 @@ const cases = reactive([
           </figure>
 
           <div class="grid place-items-center">
-            <h1 class="mt-5 text-2xl md:text-xl lg:text-2xl font-bold">
+            <h1 class="mt-5 text-2xl md:text-xl lg:text-2xl font-bold font-PtSansCaption">
               {{ cases[5].title }}
             </h1>
             <div class="bg-[#FFA500] w-10 h-1 rounded-full my-2.5 mr-2"></div>
