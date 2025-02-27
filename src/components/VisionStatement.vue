@@ -21,12 +21,16 @@
             <button
               class="bg-white text-[#FFA500] px-8 py-3 rounded-full transition font-bold font-Poppins"
             >
+              <Link to="#services">
               Explore Our Services
+              </Link>
             </button>
             <button
               class="bg-[#FFA500] text-white px-8 py-3 rounded-full transition font-bold font-Poppins"
             >
+              <Link to="#contact">
               Contact Us
+              </Link>
             </button>
           </div>
         </div>
@@ -39,6 +43,8 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import Link from "./Link.vue";
+</script>
 
 <style scoped></style>
