@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import "animate.css";
-import { useIntersectionObserver } from "@vueuse/core";
+import {useIntersectionObserver} from "@vueuse/core";
 
-import { reactive, ref } from "vue";
+import {reactive, ref} from "vue";
 
 const features = reactive([
   {
@@ -43,7 +43,7 @@ useIntersectionObserver(
 
 <template>
   <section
-    id="aboutSection"
+    id="about"
     ref="aboutSectionRef"
     class="py-20 animate__animated"
   >
@@ -73,13 +73,14 @@ useIntersectionObserver(
           </p>
         </div>
 
+<!--        Mobile View-->
         <div
-          class="mt-10 mb-5 md:hidden md:mt-0 md:mb-0"
           v-for="(feature, index) in features"
           :key="index"
+          class="mt-10 mb-0 md:hidden md:mt-0 md:mb-0"
         >
           <div
-            class="flex flex-col justify-center items-center bg-[#057CC3] w-40 h-40 rounded-full text-white"
+            class="flex flex-col justify-center items-center bg-[#057CC3] w-40 h-40 rounded text-white"
           >
             <h1 class="text-4xl font-bold">{{ feature.title }}</h1>
             <p class="text-[#323 031] text-center font-Poppins mt-4">
@@ -87,6 +88,8 @@ useIntersectionObserver(
             </p>
           </div>
         </div>
+
+<!--        Tablet and Mobile view-->
 
         <div class="hidden md:grid md:grid-cols-3 mt-10 gap-0">
           <div
