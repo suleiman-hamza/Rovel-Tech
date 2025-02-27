@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { h, reactive, type Ref, ref } from "vue";
+import {h, reactive, type Ref, ref} from "vue";
 
 interface ContactDetail {
   title: string;
@@ -24,7 +24,7 @@ const details: Ref<ContactDetail[]> = ref([
           "fas fa-envelope text-white text-2xl mb-4 bg-[#057CC3]  text-center p-3.5 rounded-full h-14 w-14",
       }),
     title: "Email",
-    text: "alogberachael@gmail.com",
+    text: "Roveltechworld@gmail.com",
   },
   {
     icon: () =>
@@ -50,7 +50,7 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <section
+  <section id="contact"
     class="py-20 bg-[#057CC3] bg-[url('/images/mappng.png')] bg-cover bg-center"
   >
     <section class="grid place-content-center text-center text-white mb-8">
@@ -101,8 +101,8 @@ const handleSubmit = () => {
             <!-- Select Project  -->
             <section>
               <label
-                for="project"
                 class="text-lg text-[#3A3A3A] font-semibold inline-block mb-3.5"
+                for="project"
                 >Select Project</label
               >
               <select
@@ -116,21 +116,21 @@ const handleSubmit = () => {
               </select>
             </section>
 
-            <form @submit.prevent="handleSubmit" class="mt-5">
+            <form class="mt-5" @submit.prevent="handleSubmit">
               <!--label textarea-->
               <label
-                for="message"
                 class="text-lg text-[#3A3A3A] font-semibold inline-block mb-3.5"
+                for="message"
                 >Message</label
               >
               <div>
                 <textarea
                   id="message"
+                  v-model="form.message"
                   class="border-2 border-[#6E7276] w-full resize-none rounded-md px-2 py-4"
                   cols="30"
                   name="message"
                   placeholder="Describe your project"
-                  v-model="form.message"
                 ></textarea>
               </div>
               <!--label textarea-->
@@ -139,16 +139,16 @@ const handleSubmit = () => {
                 <!-- label name -->
                 <div>
                   <label
-                    for="name"
                     class="inline-block mb-3.5 text-lg text-[#3A3A3A] font-semibold"
+                    for="name"
                     >Name</label
                   >
                   <input
-                    type="text"
                     id="name"
                     v-model="form.name"
                     class="border-2 border-[#6E7276] w-full rounded-md px-2 py-1"
                     placeholder="Enter your name"
+                    type="text"
                   />
                 </div>
                 <!-- label name -->
@@ -156,24 +156,24 @@ const handleSubmit = () => {
                 <!-- label phoneNumber -->
                 <div>
                   <label
-                    for="phone"
                     class="inline-block mb-3.5 text-lg text-[#3A3A3A] font-semibold"
+                    for="phone"
                     >Phone Number</label
                   >
                   <input
-                    type="text"
                     id="name"
                     v-model="form.phoneNumber"
                     class="border-2 border-[#6E7276] w-full rounded-md px-2 py-1"
                     placeholder="Enter your phone number"
+                    type="text"
                   />
                 </div>
                 <!-- label phoneNumber -->
               </section>
 
               <button
-                type="submit"
                 class="bg-[#FF9635] px-4 py-2 rounded-full text-white"
+                type="submit"
               >
                 Send Message
               </button>
