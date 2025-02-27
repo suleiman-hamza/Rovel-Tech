@@ -9,6 +9,7 @@ export default {
       },
       fontFamily: {
         Poppins: ["Poppins", "sans-serif"],
+        PtSansCaption: ["PT Sans Caption", "sans-serif"],
       },
     },
   },
