@@ -1,5 +1,5 @@
 <template>
-  <section class="py-24">
+  <section id="testimonial" class="py-24">
     <div class="container mx-auto px-8">
       <div class="flex justify-center">
         <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 mr-2"></div>
@@ -15,12 +15,12 @@
         class="mt-8 overflow-hidden relative"
         @mouseenter="pauseCarousel"
         @mouseleave="resumeCarousel"
-        @touchstart="pauseCarousel"
         @touchend="resumeCarousel"
+        @touchstart="pauseCarousel"
       >
         <div
-          class="flex w-max animate-scroll"
           :class="{ 'animation-paused': isPaused }"
+          class="flex w-max animate-scroll"
         >
           <div
             v-for="(testimonial, index) in testimonials"
@@ -29,7 +29,7 @@
           >
             <div class="flex items-center gap-4 p-5">
               <figure>
-                <img alt="Testimonial" :src="testimonial.image" />
+                <img :src="testimonial.image" alt="Testimonial" />
               </figure>
               <div>
                 <p class="text-lg font-bold">{{ testimonial.name }}</p>
@@ -48,7 +48,7 @@
           >
             <div class="flex items-center gap-4 p-5">
               <figure>
-                <img alt="Testimonial" :src="testimonial.image" />
+                <img :src="testimonial.image" alt="Testimonial" />
               </figure>
               <div>
                 <p class="text-lg font-bold">{{ testimonial.name }}</p>
@@ -78,7 +78,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import {ref} from "vue";
 
 const testimonials = [
   {
