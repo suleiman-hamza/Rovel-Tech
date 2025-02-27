@@ -11,9 +11,10 @@
   "dependencies": {
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@heroicons/vue": "^2.0.18",
-    "@vueuse/core": "^12.4.0",
+    "@vueuse/core": "^12.7.0",
     "animate.css": "^4.1.1",
-    "vue": "^3.4.38"
+    "vue": "^3.4.38",
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.3",

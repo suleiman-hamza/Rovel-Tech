@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import {createRouter, createWebHistory} from "vue-router";
 import HeroSection from "../components/HeroSection.vue";
 import FeaturesSection from "../components/FeaturesSection.vue";
 
@@ -27,6 +27,16 @@ const routes = [
     path: "/howItWorks",
     name: "HowItWorksSection",
     component: () => import("../components/HowItWorks.vue"),
+  },
+  {
+    path: "/whyChooseUs",
+    name: "WhyChooseUsSection",
+    component: () => import("../components/WhyChooseUs.vue"),
+  },
+  {
+    path: "/testimonial",
+    name: "TestimonialSection",
+    component: () => import("../components/Testimonials.vue"),
   },
 ];
 
