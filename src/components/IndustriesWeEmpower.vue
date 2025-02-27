@@ -14,10 +14,10 @@
       <section class="grid grid-cols-2 md:grid-cols-6 gap-4 mt-12">
         <div v-for="(industry, index) in industries" :key="index" class="h-1/2">
           <figure
-            class="flex flex-col items-center p-5"
             :class="industry.bgClass"
+            class="flex flex-col items-center p-5"
           >
-            <img :src="industry.icon" :alt="industry.title" />
+            <img :alt="industry.title" :src="industry.icon" />
 
             <p
               class="mt-5 text-[#1D1C1C] font-semibold text-center font-Poppins"
@@ -31,8 +31,8 @@
   </section>
 </template>
 
-<script setup lang="ts">
-import { reactive } from "vue";
+<script lang="ts" setup>
+import {reactive} from "vue";
 
 const industries = reactive([
   {
@@ -66,7 +66,7 @@ const industries = reactive([
     bgClass: "bg-[#F6E3C7]",
   },
   {
-    icon: "/public/icons/mdi_public.svg",
+    icon: "/icons/mdi_public.svg",
     title: "Public",
     bgClass: "bg-[#B0CFFA]",
   },
