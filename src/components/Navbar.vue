@@ -18,7 +18,9 @@ const updateActive = (to: string) => {
   ActiveLink.value = to;
 };
 const isActive = (to: string) => {
-  return ActiveLink.value === to ? "text-[#FFA500]" : "text-[#1e1e1e]";
+  return ActiveLink.value === to
+    ? "text-[#FFA500] font-bold"
+    : "text-[#1D1C1C]/80";
 };
 </script>
 
@@ -39,9 +41,7 @@ const isActive = (to: string) => {
       </figure>
 
       <nav class="hidden lg:flex lg:items-center">
-        <ul
-          class="flex space-x-8 text-lg font-Poppins font-bold text-[#1D1C1C]"
-        >
+        <ul class="flex space-x-8 text-lg font-Poppins text-[#1D1C1C]">
           <li>
             <Link
               :class="isActive('Home')"
