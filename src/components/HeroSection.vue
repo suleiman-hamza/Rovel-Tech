@@ -1,6 +1,18 @@
 <script lang="ts" setup>
 import Link from "../components/Link.vue";
-import {onMounted, onUnmounted, ref} from "vue";
+import { onMounted, onUnmounted, type Ref, ref } from "vue";
+import { useIntersectionObserver } from "@vueuse/core";
+
+const cleanStreet: Ref<HTMLElement | null> = ref(null);
+const isCleanStreet = ref(false);
+const imageSrc = ref("");
+
+useIntersectionObserver(cleanStreet, ([entry]) => {
+  if (entry.isIntersecting) {
+    isCleanStreet.value = true;
+    imageSrc.value = displayImages[currentIndex.value];
+  }
+});
 
 const displayText = [
   "Learn A Tech Skill",
@@ -23,6 +35,9 @@ let interval: number | undefined;
 
 const cycleContent = () => {
   currentIndex.value = (currentIndex.value + 1) % displayText.length;
+  if (isCleanStreet.value) {
+    imageSrc.value = displayImages[currentIndex.value];
+  }
 };
 
 onMounted(() => {
@@ -79,6 +94,7 @@ onUnmounted(() => {
           <div class="overflow-hidden">
             <transition mode="out-in" name="slide-vertical">
               <img
+                ref="cleanStreet"
                 :key="currentIndex"
                 :src="displayImages[currentIndex]"
                 alt="Hero Image"
@@ -96,9 +112,7 @@ onUnmounted(() => {
 <style scoped>
 .slide-vertical-enter-active,
 .slide-vertical-leave-active {
-  transition:
-    transform 0.5s ease-in-out,
-    opacity 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .slide-vertical-enter-from {
