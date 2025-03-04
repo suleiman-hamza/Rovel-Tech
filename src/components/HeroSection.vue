@@ -60,7 +60,7 @@ onUnmounted(() => {
           class="md:w-full mb-10 md:mb-0 text-white text-center flex flex-col justify-center items-center"
         >
           <h1 class="text-4xl lg:text-6xl font-bold mb-6 font-PtSansCaption">
-            Innovation IT Solutions for <br />
+            Innovative IT Solutions for <br />
             Your Business
           </h1>
           <p class="mb-8 font-Poppins font-medium md:text-2xl lg:text-4xl">
