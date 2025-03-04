@@ -2,7 +2,9 @@
   <section class="py-24">
     <div class="container mx-auto px-8">
       <div class="text-center">
-        <h1 class="text-2xl md:text-3xl font-bold mb-5 text-[#211D1F] font-PtSansCaption">
+        <h1
+          class="text-2xl md:text-3xl font-bold mb-5 text-[#211D1F] font-PtSansCaption"
+        >
           Industries We Empower
         </h1>
         <p class="font-poppins text-[#3A3A3A] text-lg">
@@ -11,14 +13,19 @@
         </p>
       </div>
 
-      <section class="grid grid-cols-2 md:grid-cols-6 gap-4 mt-12">
-        <div v-for="(industry, index) in industries" :key="index" class="h-1/2">
+      <section
+        class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-2 md:gap-4 mt-12"
+      >
+        <div
+          v-for="(industry, index) in industries"
+          :key="index"
+          class="flex flex-col items-center justify-center h-full w-full"
+        >
           <figure
             :class="industry.bgClass"
-            class="flex flex-col items-center p-5"
+            class="flex flex-col items-center justify-center p-5 h-full w-full"
           >
-            <img :alt="industry.title" :src="industry.icon" />
-
+            <img :alt="industry.title" :src="industry.icon" class="h-16 w-16" />
             <p
               class="mt-5 text-[#1D1C1C] font-semibold text-center font-Poppins"
             >
@@ -32,7 +39,7 @@
 </template>
 
 <script lang="ts" setup>
-import {reactive} from "vue";
+import { reactive } from "vue";
 
 const industries = reactive([
   {
