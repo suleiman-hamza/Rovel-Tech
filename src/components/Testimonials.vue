@@ -19,6 +19,7 @@
         @touchstart="pauseCarousel"
       >
         <div
+          ref="carousel"
           :class="{ 'animation-paused': isPaused }"
           class="flex w-max animate-scroll"
         >
@@ -32,7 +33,9 @@
                 <img :src="testimonial.image" alt="Testimonial" />
               </figure>
               <div>
-                <p class="text-lg font-bold font-Poppins">{{ testimonial.name }}</p>
+                <p class="text-lg font-bold font-Poppins">
+                  {{ testimonial.name }}
+                </p>
                 <p class="font-Poppins">{{ testimonial.position }}</p>
               </div>
             </div>
@@ -48,7 +51,11 @@
           >
             <div class="flex items-center gap-4 p-5">
               <figure>
-                <img :src="testimonial.image" alt="Testimonial" />
+                <img
+                  :src="testimonial.image"
+                  alt="Testimonial"
+                  loading="lazy"
+                />
               </figure>
               <div>
                 <p class="text-lg font-bold">{{ testimonial.name }}</p>
@@ -78,7 +85,7 @@
 </template>
 
 <script lang="ts" setup>
-import {ref} from "vue";
+import { ref, onMounted } from "vue";
 
 const testimonials = [
   {
@@ -119,6 +126,7 @@ const testimonials = [
 ];
 
 const isPaused = ref(false);
+const carousel = ref<HTMLElement | null>(null);
 
 const pauseCarousel = () => {
   isPaused.value = true;
@@ -129,18 +137,22 @@ const resumeCarousel = () => {
 };
 
 const scrollLeft = () => {
-  const carousel = document.querySelector(".flex.w-max");
-  if (carousel) {
-    carousel.scrollBy({ left: -350, behavior: "smooth" });
+  // const carousel = document.querySelector(".flex.w-max");
+  if (carousel.value) {
+    carousel.value.scrollBy({ left: -350, behavior: "smooth" });
   }
 };
 
 const scrollRight = () => {
-  const carousel = document.querySelector(".flex.w-max");
-  if (carousel) {
-    carousel.scrollBy({ left: 350, behavior: "smooth" });
+  // const carousel = document.querySelector(".flex.w-max");
+  if (carousel.value) {
+    carousel.value.scrollBy({ left: 350, behavior: "smooth" });
   }
 };
+
+onMounted(() => {
+  console.log("Carousel mounted", carousel.value);
+});
 </script>
 
 <style scoped>
