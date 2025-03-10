@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import Link from "../components/Link.vue";
-import { onMounted, onUnmounted, type Ref, ref } from "vue";
-import { useIntersectionObserver } from "@vueuse/core";
+import {onMounted, onUnmounted, type Ref, ref} from "vue";
+import {useIntersectionObserver} from "@vueuse/core";
+import HeroImage from "./HeroImage.vue";
 
 const cleanStreet: Ref<HTMLElement | null> = ref(null);
 const isCleanStreet = ref(false);
@@ -52,7 +53,7 @@ onUnmounted(() => {
 <template>
   <section
     id="home"
-    class="py-20 bg-[url('/images/HeroBg.png')] bg-cover bg-center"
+    class="py-20 bg-[url('/images/HeroBg.png')] bg-cover bg-center "
   >
     <div class="container mx-auto px-4">
       <div class="">
@@ -74,36 +75,11 @@ onUnmounted(() => {
             </Link>
           </button>
         </div>
+        
+<!--        heroimage-->
+        <HeroImage/>
+<!--        heroimage-->
 
-        <!-- heroImage -->
-        <section
-          class="flex flex-col md:flex-row justify-between items-center mt-12"
-        >
-          <div
-            class="text-container overflow-hidden h-48 w-48 md:h-64 md:w-64 bg-white rounded-full mb-4"
-          >
-            <transition mode="out-in" name="slide-vertical">
-              <h1
-                :key="currentIndex"
-                class="flex items-center text-center justify-center pt-20 text-2xl md:text-5xl font-bold font-Poppins text-[#057CC3]"
-              >
-                {{ displayText[currentIndex] }}
-              </h1>
-            </transition>
-          </div>
-          <div class="overflow-hidden">
-            <transition mode="out-in" name="slide-vertical">
-              <img
-                ref="cleanStreet"
-                :key="currentIndex"
-                :src="displayImages[currentIndex]"
-                alt="Hero Image"
-                class="md:h-[328px] md:w-[558px] object-cover"
-              />
-            </transition>
-          </div>
-        </section>
-        <!-- heroImage -->
       </div>
     </div>
   </section>
@@ -124,4 +100,64 @@ onUnmounted(() => {
   transform: translateY(-100%);
   opacity: 0;
 }
+.before-circle::before{
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #FFA500;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+}
+
+.After-circle::after{
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #FFFFFF;
+  border-radius: 50%;
+inset: 1.5rem 1.5rem;
+}
+
+.white-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(55, 275, 222, 0.8);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.circle-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+.circle-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle-3 {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+
+
 </style>
