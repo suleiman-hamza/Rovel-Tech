@@ -53,7 +53,7 @@ onUnmounted(() => {
 <template>
   <section
     id="home"
-    class="py-20 bg-[url('/images/HeroBg.png')] bg-cover bg-center "
+    class="py-20 bg-[url('/images/HeroBg.png')] bg-cover bg-center"
   >
     <div class="container mx-auto px-4">
       <div class="">
@@ -75,89 +75,13 @@ onUnmounted(() => {
             </Link>
           </button>
         </div>
-        
-<!--        heroimage-->
-        <HeroImage/>
-<!--        heroimage-->
 
+        <!--        heroimage-->
+        <HeroImage />
+        <!--        heroimage-->
       </div>
     </div>
   </section>
 </template>
 
-<style scoped>
-.slide-vertical-enter-active,
-.slide-vertical-leave-active {
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-.slide-vertical-enter-from {
-  transform: translateY(100%);
-  opacity: 0;
-}
-
-.slide-vertical-leave-to {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-.before-circle::before{
-  content: "";
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background: #FFA500;
-  border-radius: 50%;
-  top: 0;
-  left: 0;
-}
-
-.After-circle::after{
-  content: "";
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background: #FFFFFF;
-  border-radius: 50%;
-inset: 1.5rem 1.5rem;
-}
-
-.white-cover {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(55, 275, 222, 0.8);
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle {
-  width: 50px;
-  height: 50px;
-  background: #FFFFFF;
-  border-radius: 50%;
-  margin: 10px;
-}
-
-.circle-1 {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-}
-
-.circle-2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.circle-3 {
-  position: absolute;
-  top: 20%;
-  right: 20%;
-}
-
-
-</style>
+<style scoped></style>
