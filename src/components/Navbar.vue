@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { useIntersectionObserver } from "@vueuse/core";
-import { ref, shallowRef, useTemplateRef } from "vue";
+import {useIntersectionObserver} from "@vueuse/core";
+import {ref, shallowRef, useTemplateRef} from "vue";
 import Link from "./Link.vue";
 
 const target = useTemplateRef<HTMLDivElement>("target");
@@ -107,7 +107,7 @@ const isActive = (to: string) => {
       </nav>
 
       <!-- icon -->
-      <div class="text-2xl lg:hidden cursor-pointer" @click="toggleVisibility">
+      <div class="text-2xl lg:hidden cursor-pointer text-black" @click="toggleVisibility">
         <i v-if="!visibility" class="fa-solid fa-bars"></i>
         <i v-else class="fa-solid fa-xmark"></i>
       </div>

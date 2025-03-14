@@ -91,7 +91,7 @@ const handleSubmit = () => {
       <section class="bg-white px-8 py-12 rounded-lg shadow-lg">
         <div class="flex flex-col md:flex-row justify-between gap-8">
           <section>
-            <h3 class="mb-5 font-bold text-2xl font-PtSansCaption">
+            <h3 class="mb-5 font-bold text-2xl font-PtSansCaption text-[#211D1F]">
               Our Contacts
             </h3>
             <div
@@ -101,7 +101,7 @@ const handleSubmit = () => {
             >
               <component :is="detail.icon" />
               <div class="mb-10">
-                <h4 class="text-#3A3A3A text-xl font-bold font-Poppins">
+                <h4 class="text-#3A3A3A text-xl font-bold font-Poppins text-[#3A3A3A]">
                   {{ detail.title }}
                 </h4>
                 <component :is="detail.text" />
@@ -112,7 +112,7 @@ const handleSubmit = () => {
 
           <section>
             <section class="mb-5">
-              <p class="text-[#3A3A3A ] mb-1.5 font-Poppins">
+              <p class="text-[#3A3A3A ] mb-1.5 font-Poppins text-[#3A3A3A]">
                 LET HELP YOU WITH YOUR PROJECT
               </p>
               <h4 class="font-bold text-2xl text-[#3A3A3A] font-Poppins">
@@ -149,7 +149,7 @@ const handleSubmit = () => {
                 <textarea
                   id="message"
                   v-model="form.message"
-                  class="border-2 border-[#6E7276] w-full resize-none rounded-md px-2 py-4 font-Poppins"
+                  class="border-2 border-[#6E7276] w-full resize-none rounded-md px-2 py-4 font-Poppins bg-transparent placeholder:text-[#999999] text-[#3a3a3a]"
                   cols="30"
                   name="message"
                   placeholder="Describe your project"
@@ -168,7 +168,7 @@ const handleSubmit = () => {
                   <input
                     id="name"
                     v-model="form.name"
-                    class="border-2 border-[#6E7276] w-full rounded-md px-2 py-1 font-Poppins"
+                    class="border-2 border-[#6E7276] w-full rounded-md px-2 py-1 font-Poppins bg-transparent placeholder:text-[#999999] text-[#3a3a3a]"
                     placeholder="Enter your name"
                     type="text"
                   />
@@ -185,7 +185,7 @@ const handleSubmit = () => {
                   <input
                     id="name"
                     v-model="form.phoneNumber"
-                    class="border-2 border-[#6E7276] w-full rounded-md px-2 py-1 font-Poppins"
+                    class="border-2 border-[#6E7276] w-full rounded-md px-2 py-1 font-Poppins bg-transparent placeholder:text-[#999999] text-[#3a3a3a]"
                     placeholder="Enter your phone number"
                     type="text"
                   />

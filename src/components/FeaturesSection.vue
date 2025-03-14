@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import "animate.css";
-import { useIntersectionObserver } from "@vueuse/core";
+import {useIntersectionObserver} from "@vueuse/core";
 
-import { reactive, ref } from "vue";
+import {reactive, ref} from "vue";
 
 const features = reactive([
   {
@@ -50,13 +50,13 @@ useIntersectionObserver(
         <div class="text-center md:text-left">
           <div class="flex justify-center">
             <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 mr-2"></div>
-            <h1 class="text-4xl md:text-5xl font-bold font-PtSansCaption mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold font-PtSansCaption mb-8 text-[#3A3A3A]">
               About Us
             </h1>
             <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 ml-2"></div>
           </div>
           <h3
-            class="font-poppins font-bold text-xl md:text-2xl leading-relaxed"
+            class="font-poppins font-bold text-xl md:text-2xl leading-relaxed text-[#333333]"
           >
             Empowering Your Digital Vision <br />
             With Innovative Solutions

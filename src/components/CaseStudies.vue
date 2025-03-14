@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import "animate.css";
 
-import { reactive, Ref, ref } from "vue";
-import { useIntersectionObserver } from "@vueuse/core";
+import {reactive, Ref, ref} from "vue";
+import {useIntersectionObserver} from "@vueuse/core";
 
 const imagevw: Ref<HTMLElement | null> = ref(null);
 const isImageVW = ref(false);
@@ -107,7 +107,7 @@ const cases = reactive([
           ref="aboutSection"
           class="bg-white rounded-lg shadow-lg p-6 animate__animated opacity-0 translate-y-10"
         >
-          <figure class="grid place-content-center bg-[#052139]" ref="imagevw">
+          <figure ref="imagevw" class="grid place-content-center bg-[#052139]">
             <img
               :alt="cases[0].title"
               :src="cases[0].image"
@@ -116,7 +116,7 @@ const cases = reactive([
           </figure>
 
           <div class="grid place-items-center">
-            <h1 class="mt-5 text-2xl md:text-lg font-bold font-Poppins">
+            <h1 class="mt-5 text-2xl md:text-lg font-bold font-Poppins text-[#1E1E1E]">
               {{ cases[0].title }}
             </h1>
             <div class="bg-[#FFA500] w-10 h-1 rounded-full my-2.5 mr-2"></div>
@@ -131,12 +131,12 @@ const cases = reactive([
           ref="solar"
           class="bg-white rounded-lg shadow-lg p-6 animate__animated opacity-0 translate-x-10"
         >
-          <figure class="grid place-content-center" ref="imagevw">
+          <figure ref="imagevw" class="grid place-content-center">
             <img :alt="cases[1].title" :src="cases[1].image" />
           </figure>
 
           <div class="grid place-items-center">
-            <h1 class="mt-5 text-2xl md:text-lg font-bold font-Poppins">
+            <h1 class="mt-5 text-2xl md:text-lg font-bold font-Poppins text-[#1E1E1E]">
               {{ cases[1].title }}
             </h1>
             <div class="bg-[#FFA500] w-10 h-1 rounded-full my-2.5 mr-2"></div>
@@ -151,12 +151,12 @@ const cases = reactive([
           ref="subscription"
           class="bg-white rounded-lg shadow-lg p-6 animate__animated opacity-0 -translate-y-10"
         >
-          <figure class="grid place-content-center" ref="imagevw">
+          <figure ref="imagevw" class="grid place-content-center">
             <img :alt="cases[2].title" :src="cases[2].image" />
           </figure>
 
           <div class="grid place-items-center">
-            <h1 class="mt-5 text-2xl md:text-lg font-bold font-Poppins">
+            <h1 class="mt-5 text-2xl md:text-lg font-bold font-Poppins text-[#1E1E1E]">
               {{ cases[2].title }}
             </h1>
             <div class="bg-[#FFA500] w-10 h-1 rounded-full my-2.5 mr-2"></div>
@@ -171,12 +171,12 @@ const cases = reactive([
           ref="webDeveloper"
           class="bg-white rounded-lg shadow-lg p-6 opacity-0 translate-y-10 animate__animated"
         >
-          <figure class="grid place-content-center" ref="imagevw">
+          <figure ref="imagevw" class="grid place-content-center">
             <img :alt="cases[3].title" :src="cases[3].image" />
           </figure>
 
           <div class="grid place-items-center">
-            <h1 class="mt-5 text-2xl md:text-lg font-bold font-Poppins">
+            <h1 class="mt-5 text-2xl md:text-lg font-bold font-Poppins text-[#1E1E1E]">
               {{ cases[3].title }}
             </h1>
             <div class="bg-[#FFA500] w-10 h-1 rounded-full my-2.5 mr-2"></div>
@@ -191,12 +191,12 @@ const cases = reactive([
           ref="design"
           class="bg-white rounded-lg shadow-lg p-6 animate__animated opacity-0 translate-y-10 font-Poppins"
         >
-          <figure class="grid place-content-center" ref="imagevw">
+          <figure ref="imagevw" class="grid place-content-center">
             <img :alt="cases[4].title" :src="cases[4].image" />
           </figure>
 
           <div class="grid place-items-center">
-            <h1 class="mt-5 text-2xl md:text-lg font-bold">
+            <h1 class="mt-5 text-2xl md:text-lg font-bold text-[#1E1E1E]">
               {{ cases[4].title }}
             </h1>
             <div class="bg-[#FFA500] w-10 h-1 rounded-full my-2.5 mr-2"></div>
@@ -211,12 +211,12 @@ const cases = reactive([
           ref="marketing"
           class="bg-white rounded-lg shadow-lg p-6 animate__animated font-Poppins opacity-0 translate-x-10"
         >
-          <figure class="grid place-content-center" ref="imagevw">
+          <figure ref="imagevw" class="grid place-content-center">
             <img :alt="cases[5].title" :src="cases[5].image" />
           </figure>
 
           <div class="grid place-items-center">
-            <h1 class="mt-5 text-2xl md:text-lg font-bold">
+            <h1 class="mt-5 text-2xl md:text-lg font-bold text-[#1E1E1E]">
               {{ cases[5].title }}
             </h1>
             <div class="bg-[#FFA500] w-10 h-1 rounded-full my-2.5 mr-2"></div>
