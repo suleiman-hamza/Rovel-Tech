@@ -4,7 +4,7 @@ import {h, reactive, type Ref, ref} from "vue";
 interface ContactDetail {
   title: string;
   icon: () => ReturnType<typeof h>;
-  text: string;
+  text?: () => ReturnType<typeof h>;
 }
 
 const details: Ref<ContactDetail[]> = ref([
@@ -15,7 +15,14 @@ const details: Ref<ContactDetail[]> = ref([
         class:
           "fas fa-phone text-white text-2xl mb-4 bg-[#057CC3]  text-center p-3.5 rounded-full h-14 w-14",
       }),
-    text: "+2349165486229",
+    text: () =>
+      h(
+        "p",
+        {
+          class: "text-[#111] text-lg font-Poppins",
+        },
+        ["+2349165486229"],
+      ),
   },
   {
     icon: () =>
@@ -24,7 +31,12 @@ const details: Ref<ContactDetail[]> = ref([
           "fas fa-envelope text-white text-2xl mb-4 bg-[#057CC3]  text-center p-3.5 rounded-full h-14 w-14",
       }),
     title: "Email",
-    text: "Roveltechworld@gmail.com",
+    text: () =>
+      h("p", { class: "text-[#111] text-lg font-Poppins" }, [
+        "Roveltechworld",
+        h("br"),
+        "@gmail.com",
+      ]),
   },
   {
     icon: () =>
@@ -33,7 +45,11 @@ const details: Ref<ContactDetail[]> = ref([
           "fas fa-location-dot text-white text-2xl mb-4 bg-[#057CC3]  text-center p-3.5 rounded-full h-14 w-14",
       }),
     title: "Location",
-    text: "10 Gynoscope Drive PH City, Rivers Nigeria.",
+    text: () =>
+      h("p", { class: "text-[#111] text-lg font-Poppins" }, [
+        "10 Gynoscope Drive PH City, Rivers Nigeria.",
+        h("br"),
+      ]),
   },
 ]);
 
@@ -50,13 +66,16 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <section id="contact"
+  <section
+    id="contact"
     class="py-20 bg-[#057CC3] bg-[url('/images/mappng.png')] bg-cover bg-center"
   >
     <section class="grid place-content-center text-center text-white mb-8">
       <div class="flex justify-center">
         <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 mr-2"></div>
-        <h1 class="font-bold text-5xl flex items-center justify-center font-PtSansCaption">
+        <h1
+          class="font-bold text-5xl flex items-center justify-center font-PtSansCaption"
+        >
           Contact Us
         </h1>
         <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 ml-2"></div>
@@ -72,7 +91,9 @@ const handleSubmit = () => {
       <section class="bg-white px-8 py-12 rounded-lg shadow-lg">
         <div class="flex flex-col md:flex-row justify-between gap-8">
           <section>
-            <h3 class="mb-5 font-bold text-2xl font-PtSansCaption">Our Contacts</h3>
+            <h3 class="mb-5 font-bold text-2xl font-PtSansCaption">
+              Our Contacts
+            </h3>
             <div
               v-for="(detail, index) in details"
               :key="index"
@@ -83,7 +104,8 @@ const handleSubmit = () => {
                 <h4 class="text-#3A3A3A text-xl font-bold font-Poppins">
                   {{ detail.title }}
                 </h4>
-                <p class="text-[#111] text-lg font-Poppins">{{ detail.text }}</p>
+                <component :is="detail.text" />
+                <!--                <p class="text-[#111] text-lg font-Poppins">{{ detail.text }}</p>-->
               </div>
             </div>
           </section>
