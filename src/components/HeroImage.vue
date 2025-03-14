@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import {onMounted, onUnmounted, type Ref, ref} from "vue";
-import {useIntersectionObserver} from "@vueuse/core";
+import { onMounted, onUnmounted, type Ref, ref } from "vue";
+import { useIntersectionObserver } from "@vueuse/core";
 
 const cleanStreet: Ref<HTMLElement | null> = ref(null);
 const isCleanStreet = ref(false);
@@ -96,8 +96,6 @@ onUnmounted(() => {
       </transition>
     </div>
   </section>
- 
-
 </template>
 
 <style scoped>
@@ -129,12 +127,12 @@ onUnmounted(() => {
 
 /* Curved Progress Arc */
 .progress-arc {
- @apply absolute left-0 top-20 w-52 h-52 border-4 border-transparent border-l-white border-t-white rounded-full transform rotate-[135deg]
+  @apply absolute left-0 top-20 w-52 h-52 border-4 border-transparent border-l-white border-t-white rounded-full transform rotate-[135deg];
 }
 
 /* Small Circles on the Arc */
 .circle {
- @apply w-4 h-4 bg-white rounded-full absolute
+  @apply w-4 h-4 bg-white rounded-full absolute;
 }
 
 /* Positioning Small Circles */
@@ -186,7 +184,7 @@ onUnmounted(() => {
 
 /* Side Label */
 .label-box {
- @apply flex items-center bg-white p-2.5 rounded-2xl absolute right-[-80px] top-[75px] animate-[label-box-animation_20000ms_infinite]
+  @apply flex items-center bg-white p-2.5 rounded-2xl absolute right-[-80px] top-[75px] animate-[label-box-animation_20000ms_infinite];
 }
 
 .label-box .icon {
@@ -203,7 +201,7 @@ onUnmounted(() => {
 
 /* Pagination Dots */
 .pagination {
- @apply absolute bottom-[-40px] left-[28%] transform -translate-x-1/2 flex gap-2.5
+  @apply absolute bottom-[-40px] left-[28%] transform -translate-x-1/2 flex gap-2.5;
 }
 
 .dot {
