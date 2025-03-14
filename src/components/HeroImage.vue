@@ -1,17 +1,15 @@
 <script lang="ts" setup>
-import { onMounted, onUnmounted, type Ref, ref } from "vue";
-import { useIntersectionObserver } from "@vueuse/core";
+import {onMounted, onUnmounted, type Ref, ref} from "vue";
+// import {useIntersectionObserver} from "@vueuse/core";
 
 const cleanStreet: Ref<HTMLElement | null> = ref(null);
 const isCleanStreet = ref(false);
 const imageSrc = ref("");
 
-useIntersectionObserver(cleanStreet, ([entry]) => {
-  if (entry.isIntersecting) {
-    isCleanStreet.value = true;
-    imageSrc.value = displayImages[currentIndex.value];
-  }
-});
+
+
+
+
 
 const displayText = [
   "Learn A Tech Skill",
@@ -39,17 +37,32 @@ const cycleContent = () => {
   }
 };
 
+const observer = new IntersectionObserver((entries) => {
+  const [entry] = entries;
+  isCleanStreet.value = entry.isIntersecting;
+},{threshold:0.5});
+
 onMounted(() => {
+
+  if (cleanStreet.value){
+    observer.observe(cleanStreet.value)
+  }
+
   interval = window.setInterval(cycleContent, 5000);
 });
 
 onUnmounted(() => {
   clearInterval(interval);
+
+  if (cleanStreet.value){
+    // let observer;
+    observer.unobserve(cleanStreet.value)
+  }
 });
 </script>
 
 <template>
-  <section class="flex justify-evenly items-center h-full gap-10 mt-20">
+  <section class="flex flex-wrap lg:flex-row  lg:justify-evenly items-center h-full lg:gap-10 mt-20">
     <div class="wrapper">
       <div class="app-circle">
         <transition mode="out-in" name="slide-vertical">
@@ -69,10 +82,10 @@ onUnmounted(() => {
       </div>
 
       <!--  side label-->
-      <div class="label-box">
+      <div class="label-box ">
         <div class="w-10 h-[0.1rem] bg-white absolute -left-10"></div>
-        <div class="icon">📱💻</div>
-        <span>DESIGN AND DEVELOPMENT</span>
+        <div class="icon ">📱💻</div>
+        <span class="prose lg:prose-xl overflow-hidden">DESIGN AND  DEVELOPMENT</span>
       </div>
 
       <!-- Pagination Dots -->
@@ -122,12 +135,12 @@ onUnmounted(() => {
 }
 
 .app-circle {
-  @apply w-40 h-40 bg-white rounded-full flex justify-center items-center text-center flex-col text-2xl font-bold text-[#0a4877] absolute left-5 top-24 p-2;
+  @apply w-48 h-48 lg:w-40 lg:h-40 bg-white rounded-full flex justify-center items-center text-center flex-col text-2xl font-bold text-[#0a4877] absolute top-[5.5rem] left-10 lg:left-5 lg:top-24 p-2;
 }
 
 /* Curved Progress Arc */
 .progress-arc {
-  @apply absolute left-0 top-20 w-52 h-52 border-4 border-transparent border-l-white border-t-white rounded-full transform rotate-[135deg];
+  @apply absolute left-11 top-[5rem] lg:left-0 lg:top-20 w-52 h-52 border-4 border-transparent border-l-white border-t-white rounded-full transform rotate-[135deg];
 }
 
 /* Small Circles on the Arc */
@@ -184,7 +197,7 @@ onUnmounted(() => {
 
 /* Side Label */
 .label-box {
-  @apply flex items-center bg-white p-2.5 rounded-2xl absolute right-[-80px] top-[75px] animate-[label-box-animation_20000ms_infinite];
+  @apply hidden lg:flex items-center bg-white p-2.5 rounded-2xl absolute right-[-80px] top-[75px] animate-[label-box-animation_20000ms_infinite];
 }
 
 .label-box .icon {
@@ -201,7 +214,7 @@ onUnmounted(() => {
 
 /* Pagination Dots */
 .pagination {
-  @apply absolute bottom-[-40px] left-[28%] transform -translate-x-1/2 flex gap-2.5;
+  @apply absolute bottom-[-40px] left-[28%] transform -translate-x-1/2 hidden lg:flex gap-2.5;
 }
 
 .dot {
