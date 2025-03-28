@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {ref} from "vue";
+import { ref } from "vue";
 
 const testimonials = [
   {
@@ -106,7 +106,7 @@ const prevBtn = () => {
           <div
             v-for="(testimonial, index) in testimonials"
             :key="index"
-            class="testimonialCard p-5 rounded-md bg-[#EEF5F6] hover:bg-transparent w-[350px] flex-shrink-0 mx-4 cursor-pointer"
+            class="testimonialCard p-5 rounded-md bg-[#EEF5F6] hover:border-2 hover:border-[#0B7A91] hover:bg-transparent w-[350px] flex-shrink-0 mx-4 cursor-pointer transition-all duration-500 ease"
           >
             <div class="flex items-center gap-4 p-5">
               <figure>
@@ -126,28 +126,28 @@ const prevBtn = () => {
             </blockquote>
           </div>
 
-<!--                              <div-->
-<!--                                v-for="(testimonial, index) in testimonials"-->
-<!--                                :key="index + testimonials.length"-->
-<!--                                class="testimonialCard p-5 rounded-md bg-[#EEF5F6] hover:bg-transparent w-[350px] flex-shrink-0 mx-4 "-->
-<!--                              >-->
-<!--                                <div class="flex items-center gap-4 p-5">-->
-<!--                                  <figure>-->
-<!--                                    <img-->
-<!--                                      :src="testimonial.image"-->
-<!--                                      alt="Testimonial"-->
-<!--                                      loading="lazy"-->
-<!--                                    />-->
-<!--                                  </figure>-->
-<!--                                  <div>-->
-<!--                                    <h4 class="text-lg font-bold text-[#1E1E1E]">{{ testimonial.name }}</h4>-->
-<!--                                    <p class="font-Poppins text-[#3A3A3A]">{{ testimonial.position }}</p>-->
-<!--                                  </div>-->
-<!--                                </div>-->
-<!--                                <blockquote class="font-Poppins leading-relaxed text-[#3A3A3A]">-->
-<!--                                  {{ testimonial.quote }}-->
-<!--                                </blockquote>-->
-<!--                              </div>-->
+          <!--                              <div-->
+          <!--                                v-for="(testimonial, index) in testimonials"-->
+          <!--                                :key="index + testimonials.length"-->
+          <!--                                class="testimonialCard p-5 rounded-md bg-[#EEF5F6] hover:bg-transparent w-[350px] flex-shrink-0 mx-4 "-->
+          <!--                              >-->
+          <!--                                <div class="flex items-center gap-4 p-5">-->
+          <!--                                  <figure>-->
+          <!--                                    <img-->
+          <!--                                      :src="testimonial.image"-->
+          <!--                                      alt="Testimonial"-->
+          <!--                                      loading="lazy"-->
+          <!--                                    />-->
+          <!--                                  </figure>-->
+          <!--                                  <div>-->
+          <!--                                    <h4 class="text-lg font-bold text-[#1E1E1E]">{{ testimonial.name }}</h4>-->
+          <!--                                    <p class="font-Poppins text-[#3A3A3A]">{{ testimonial.position }}</p>-->
+          <!--                                  </div>-->
+          <!--                                </div>-->
+          <!--                                <blockquote class="font-Poppins leading-relaxed text-[#3A3A3A]">-->
+          <!--                                  {{ testimonial.quote }}-->
+          <!--                                </blockquote>-->
+          <!--                              </div>-->
         </div>
       </div>
 
