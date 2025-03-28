@@ -1,69 +1,68 @@
 <script lang="ts" setup>
-import {onMounted, onUnmounted, type Ref, ref} from "vue";
+// import { onMounted, onUnmounted, type Ref, ref } from "vue";
 // import {useIntersectionObserver} from "@vueuse/core";
 
-const cleanStreet: Ref<HTMLElement | null> = ref(null);
-const isCleanStreet = ref(false);
-const imageSrc = ref("");
+// const cleanStreet: Ref<HTMLElement | null> = ref(null);
+// const isCleanStreet = ref(false);
+// const imageSrc = ref("");
 
+// const displayText = [
+//   "Learn A Tech Skill",
+//   "Go Solar",
+//   "Subscribe Easily",
+//   "Go Digital",
+//   "App Development",
+//   "Web Development",
+// ];
+// const displayImages = [
+//   "/images/academy.png",
+//   "/images/solar.png",
+//   "/images/subcribe.png",
+//   "/images/go-digital.png",
+//   "/images/app.png",
+//   "/images/website.png",
+// ];
+// const currentIndex = ref(0);
+// let interval: number | undefined;
 
+// const cycleContent = () => {
+//   currentIndex.value = (currentIndex.value + 1) % displayText.length;
+//   if (isCleanStreet.value) {
+//     imageSrc.value = displayImages[currentIndex.value];
+//   }
+// };
 
+// const observer = new IntersectionObserver(
+//   (entries) => {
+//     const [entry] = entries;
+//     isCleanStreet.value = entry.isIntersecting;
+//   },
+//   { threshold: 0.5 }
+// );
 
+// onMounted(() => {
+//   if (cleanStreet.value) {
+//     observer.observe(cleanStreet.value);
+//   }
 
+//   interval = window.setInterval(cycleContent, 5000);
+// });
 
-const displayText = [
-  "Learn A Tech Skill",
-  "Go Solar",
-  "Subscribe Easily",
-  "Go Digital",
-  "App Development",
-  "Web Development",
-];
-const displayImages = [
-  "/images/academy.png",
-  "/images/solar.png",
-  "/images/subcribe.png",
-  "/images/go-digital.png",
-  "/images/app.png",
-  "/images/website.png",
-];
-const currentIndex = ref(0);
-let interval: number | undefined;
+// onUnmounted(() => {
+//   clearInterval(interval);
 
-const cycleContent = () => {
-  currentIndex.value = (currentIndex.value + 1) % displayText.length;
-  if (isCleanStreet.value) {
-    imageSrc.value = displayImages[currentIndex.value];
-  }
-};
-
-const observer = new IntersectionObserver((entries) => {
-  const [entry] = entries;
-  isCleanStreet.value = entry.isIntersecting;
-},{threshold:0.5});
-
-onMounted(() => {
-
-  if (cleanStreet.value){
-    observer.observe(cleanStreet.value)
-  }
-
-  interval = window.setInterval(cycleContent, 5000);
-});
-
-onUnmounted(() => {
-  clearInterval(interval);
-
-  if (cleanStreet.value){
-    // let observer;
-    observer.unobserve(cleanStreet.value)
-  }
-});
+//   if (cleanStreet.value) {
+//     // let observer;
+//     observer.unobserve(cleanStreet.value);
+//   }
+// });
 </script>
 
 <template>
-  <section class="flex flex-wrap lg:flex-row  lg:justify-evenly items-center h-full lg:gap-10 mt-20">
-    <div class="wrapper">
+  <section
+    class="flex flex-wrap lg:flex-row lg:justify-evenly items-center h-full lg:gap-10 mt-20"
+  >
+    <!-- <div class="wrapper">
       <div class="app-circle">
         <transition mode="out-in" name="slide-vertical">
           <span :key="currentIndex" class="">
@@ -72,7 +71,7 @@ onUnmounted(() => {
         </transition>
       </div>
 
-      <!--  Curved Progress Arc-->
+      //Curved Progress Arc
       <div class="progress-arc">
         <div class="arc-line"></div>
         <div class="circle small"></div>
@@ -81,14 +80,16 @@ onUnmounted(() => {
         <div class="circle small"></div>
       </div>
 
-      <!--  side label-->
-      <div class="label-box ">
+      //  side label
+      <div class="label-box">
         <div class="w-10 h-[0.1rem] bg-white absolute -left-10"></div>
-        <div class="icon ">📱💻</div>
-        <span class="prose lg:prose-xl overflow-hidden">DESIGN AND  DEVELOPMENT</span>
+        <div class="icon">📱💻</div>
+        <span class="prose lg:prose-xl overflow-hidden"
+          >DESIGN AND DEVELOPMENT</span
+        >
       </div>
 
-      <!-- Pagination Dots -->
+      // Pagination Dots
       <div class="pagination">
         <span class="dot"></span>
         <span class="dot"></span>
@@ -96,6 +97,7 @@ onUnmounted(() => {
         <span class="dot active"></span>
       </div>
     </div>
+  
 
     <div class="overflow-hidden">
       <transition mode="out-in" name="slide-vertical">
@@ -107,16 +109,19 @@ onUnmounted(() => {
           class="md:h-[328px] md:w-[558px] object-cover"
         />
       </transition>
-    </div>
+    </div> -->
+
+    <video autoplay="true" loop muted>
+      <source src="../../public/General-Website.mp4" type="video/mp4" />
+    </video>
   </section>
 </template>
 
 <style scoped>
+/*
 .slide-vertical-enter-active,
 .slide-vertical-leave-active {
-  transition:
-    transform 0.5s ease-in-out,
-    opacity 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .slide-vertical-enter-from {
@@ -138,19 +143,18 @@ onUnmounted(() => {
   @apply w-48 h-48 lg:w-40 lg:h-40 bg-white rounded-full flex justify-center items-center text-center flex-col text-2xl font-bold text-[#0a4877] absolute top-[5.5rem] left-10 lg:left-5 lg:top-24 p-2;
 }
 
-/* Curved Progress Arc */
+// Curved Progress Arc 
 .progress-arc {
   @apply absolute left-11 top-[5rem] lg:left-0 lg:top-20 w-52 h-52 border-4 border-transparent border-l-white border-t-white rounded-full transform rotate-[135deg];
 }
 
-/* Small Circles on the Arc */
+ // Small Circles on the Arc 
 .circle {
   @apply w-4 h-4 bg-white rounded-full absolute;
 }
 
-/* Positioning Small Circles */
-/*
-*/
+// Positioning Small Circles 
+
 .circle:nth-child(2) {
   left: 49px;
   top: 0px;
@@ -195,7 +199,7 @@ onUnmounted(() => {
   }
 }
 
-/* Side Label */
+// Side Label 
 .label-box {
   @apply hidden lg:flex items-center bg-white p-2.5 rounded-2xl absolute right-[-80px] top-[75px] animate-[label-box-animation_20000ms_infinite];
 }
@@ -212,7 +216,7 @@ onUnmounted(() => {
   color: #000;
 }
 
-/* Pagination Dots */
+// Pagination Dots 
 .pagination {
   @apply absolute bottom-[-40px] left-[28%] transform -translate-x-1/2 hidden lg:flex gap-2.5;
 }
@@ -229,4 +233,5 @@ onUnmounted(() => {
   background: white;
   opacity: 1;
 }
+*/
 </style>
