@@ -53,7 +53,7 @@ onUnmounted(() => {
 <template>
   <section
     id="home"
-    class="py-20 bg-[url('/images/HeroBg.png')] bg-cover bg-center"
+    class="py-15 bg-[url('/images/HeroBg.png')] bg-cover bg-center"
   >
     <div class="container mx-auto px-4">
       <div class="">

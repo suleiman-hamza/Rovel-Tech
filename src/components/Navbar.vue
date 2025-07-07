@@ -23,15 +23,18 @@ const isActive = (to: string) => {
     ? "text-[#FFA500] font-bold"
     : "text-[#1D1C1C]/80";
 };
+
+// responsive margin refrence
+// mx-4 sm:mx-12 md:mx-16
 </script>
 
 <template>
-  <div ref="target" class="border border-red-600 p-2">
+  <div ref="target">
     <header
       :class="{
-        'fixed top-0 left-0 w-full bg-white shadow-lg z-[999] px-4 py-4':
+        'fixed top-0 left-0 w-full bg-white shadow-lg z-[999] px-4 sm:px-12 md:px-16 py-4':
           !targetIsVisible,
-        'lg:py-2 lg:px-2': targetIsVisible,
+        'p-4 sm:px-8 md:px-12': targetIsVisible,
       }"
       class="flex justify-between items-center border"
     >
@@ -108,10 +111,10 @@ const isActive = (to: string) => {
       </nav>
 
       <!-- icon -->
-      <div class="text-2xl lg:hidden cursor-pointer text-black" @click="toggleVisibility">
+      <button class="text-2xl lg:hidden cursor-pointer text-black" @click="toggleVisibility">
         <Bars3Icon v-if="!visibility" class="size-6 text-blue-500" />
         <XMarkIcon v-else  class="size-6 text-blue-500" />
-      </div>
+      </button>
     </header>
 
     <!-- mobile nav -->

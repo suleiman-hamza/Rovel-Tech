@@ -42,18 +42,18 @@ useIntersectionObserver(
 </script>
 
 <template>
-  <section id="about" ref="aboutSectionRef" class="py-20 animate__animated">
-    <div class="container mx-auto px-4">
+  <section id="about" ref="aboutSectionRef" class="py-20 mx-4 sm:mx-12 md:mx-16 animate__animated">
+    <div class="">
       <div
-        class="flex flex-col justify-between items-center md:flex-col lg:flex-row"
+        class="flex flex-col md:justify-between items-center md:flex-row lg:flex-row"
       >
-        <div class="text-center md:text-left">
-          <div class="flex justify-center">
-            <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 mr-2"></div>
-            <h1 class="text-4xl md:text-5xl font-bold font-PtSansCaption mb-8 text-[#3A3A3A]">
+        <div class="text-center md:text-left p-4">
+          <div class="flex items-center justify-center md:justify-start mb-4 md:mb-6">
+            <span class="bg-[#FFA500] w-10 h-1 rounded-full"></span>
+            <h1 class="text-4xl md:text-5xl font-bold font-PtSansCaption leading-none text-[#3A3A3A]">
               About Us
             </h1>
-            <div class="bg-[#FFA500] w-10 h-1 rounded-full mt-6 ml-2"></div>
+            <span class="bg-[#FFA500] w-10 h-1 rounded-full"></span>
           </div>
           <h3
             class="font-poppins font-bold text-xl md:text-2xl leading-relaxed text-[#333333]"
@@ -89,12 +89,12 @@ useIntersectionObserver(
 
         <!--        Tablet and Desktop view-->
 
-        <div class="hidden md:grid md:grid-cols-3 mt-10 gap-0">
+        <div class="hidden md:grid md:grid-cols-[120px_30px_120px_30px_120px] md:grid-rows-[120px_30px_120px_30px_120px] lg:grid-cols-[140px_40px_140px_40px_140px] lg:grid-rows-[140px_40px_140px_40px_140px] gap-0 border max-w-[60vw]">
           <div
-            class="text-center md:col-start-2 flex justify-center items-center"
+            class="bg-[#057CC3] text-center md:col-start-3 md:col-end-4 flex justify-center items-center w-full h-full"
           >
-            <div class="bg-[#057CC3] w-[65%] p-6 text-white text-center">
-              <h3 class="text-2xl font-bold mt-4 font-Poppins">
+            <div class="flex-col justify-center items-center text-white text-center">
+              <h3 class="text-2xl font-bold font-Poppins">
                 {{ features[0].title }}
               </h3>
               <p class="font-Poppins">{{ features[0].description }}</p>
@@ -102,10 +102,10 @@ useIntersectionObserver(
           </div>
 
           <div
-            class="flex justify-end text-center items-center md:col-start-1 md:row-start-2"
+            class="bg-[#057CC3] flex text-center justify-center items-center md:col-start-1 md:row-start-3 md:row-end-4"
           >
             <div
-              class="bg-[#057CC3] w-[50%] h-40 p-6 flex flex-col justify-center text-white"
+              class="flex-col justify-center items-center text-white text-center"
             >
               <h3 class="text-2xl font-bold mt-4 font-Poppins">
                 {{ features[1].title }}
@@ -117,16 +117,16 @@ useIntersectionObserver(
           </div>
 
           <div
-            class="flex justify-center items-center md:col-start-2 md:row-start-2 border-[42px] border-[#057CC3] w-full p-10"
+            class="bg-blue-400 flex justify-center items-center md:col-start-2 md:col-end-5 md:row-start-2 md:row-end-5 border-[#057CC3] w-full"
           >
             <img alt="Logo" src="/images/Logo.svg" width="150px" />
           </div>
 
           <div
-            class="flex items-center text-center text-white md:col-start-3 md:row-start-2"
+            class="bg-[#057CC3] flex items-center justify-center text-center text-white md:col-start-5 md:row-start-3 md:row-end-4 md:col-end-6"
           >
             <div
-              class="bg-[#057CC3] w-[50%] h-40 p-6 flex flex-col justify-center"
+              class="flex-col justify-center items-center text-white text-center"
             >
               <h3 class="text-2xl font-bold mt-4 font-Poppins">
                 {{ features[2].title }}
@@ -138,9 +138,9 @@ useIntersectionObserver(
           </div>
 
           <div
-            class="text-center md:col-start-2 md:row-start-3 flex justify-center items-center"
+            class="bg-[#057CC3] text-center md:col-start-3 md:col-end-4 md:row-start-5 flex justify-center items-center"
           >
-            <div class="bg-[#057CC3] w-[65%] p-6 text-white text-center">
+            <div class="flex-col justify-center items-center text-white text-center">
               <h3 class="text-2xl font-bold mt-4 font-Poppins">
                 {{ features[3].title }}
               </h3>
