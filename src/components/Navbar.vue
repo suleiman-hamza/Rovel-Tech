@@ -2,6 +2,7 @@
 import {useIntersectionObserver} from "@vueuse/core";
 import {ref, shallowRef, useTemplateRef} from "vue";
 import Link from "./Link.vue";
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid'; // Importing Heroicons if needed
 
 const target = useTemplateRef<HTMLDivElement>("target");
 const targetIsVisible = shallowRef(false);
@@ -25,18 +26,18 @@ const isActive = (to: string) => {
 </script>
 
 <template>
-  <div ref="target" class="container mx-auto px-5">
+  <div ref="target" class="border border-red-600 p-2">
     <header
       :class="{
-        'fixed top-0 left-0 w-full bg-white shadow-lg z-[999] px-5':
+        'fixed top-0 left-0 w-full bg-white shadow-lg z-[999] px-4 py-4':
           !targetIsVisible,
-        'lg:py-8 lg:px-5': targetIsVisible,
+        'lg:py-2 lg:px-2': targetIsVisible,
       }"
-      class="lg:py-3.5 flex justify-between items-center"
+      class="flex justify-between items-center border"
     >
       <figure>
         <Link to="/">
-          <img alt="Logo" src="/images/logo.png" width="100px" />
+          <img alt="Logo" src="/images/logo.png" width="60px" />
         </Link>
       </figure>
 
@@ -108,8 +109,8 @@ const isActive = (to: string) => {
 
       <!-- icon -->
       <div class="text-2xl lg:hidden cursor-pointer text-black" @click="toggleVisibility">
-        <i v-if="!visibility" class="fa-solid fa-bars"></i>
-        <i v-else class="fa-solid fa-xmark"></i>
+        <Bars3Icon v-if="!visibility" class="size-6 text-blue-500" />
+        <XMarkIcon v-else  class="size-6 text-blue-500" />
       </div>
     </header>
 
@@ -117,7 +118,7 @@ const isActive = (to: string) => {
     <transition name="slide-fade">
       <nav
         v-if="visibility"
-        class="bg-white pt-2 px-8 py-5 fixed left-0 top-20 w-full lg:hidden z-[999]"
+        class="bg-white pt-2 px-8 py-5 fixed left-0 top-20 w-full lg:hidden z-[999] shadow"
       >
         <ul class="space-y-4 text-lg font-Poppins">
           <li>
